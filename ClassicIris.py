@@ -1,4 +1,5 @@
 from sklearn.datasets import load_iris
+from sklearn.neighbors import KNeighborsClassifier
 
 iris = load_iris()
 
@@ -16,3 +17,13 @@ print (iris.target.shape)
 
 X = iris.data
 y = iris.target
+
+knn = KNeighborsClassifier(n_neighbors=1)
+
+print (knn)
+
+knn.fit(X,y)
+
+prediction = knn.predict([[3,5,4,2]])
+
+print (prediction)
