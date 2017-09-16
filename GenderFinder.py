@@ -1,3 +1,4 @@
+#Prediction using Decision Tree Algorithm
 from sklearn import tree
 
 #[height, weight, shoe size]
@@ -10,8 +11,32 @@ Y = ['male', 'female', 'female', 'female', 'male', 'male', 'male',
 
 clf = tree.DecisionTreeClassifier()
 
+print (type(clf))
+
 clf = clf.fit(X,Y)
 
 prediction = clf.predict([[190,70,43]])
+
+print (prediction)
+
+#Prediction using K-Nearest-Neighbor Algorithm
+from sklearn.neighbors import KNeighborsClassifier
+
+knn = KNeighborsClassifier(n_neighbors=1)
+
+knn.fit(X,Y)
+
+prediction = knn.predict([[190,70,43]])
+
+print (prediction)
+
+#Prediction using LogisticRegression Algorithm
+from sklearn.linear_model import LogisticRegression
+
+logreg = LogisticRegression()
+
+logreg.fit(X,Y)
+
+predict = logreg.predict([[190,70,43]])
 
 print (prediction)
