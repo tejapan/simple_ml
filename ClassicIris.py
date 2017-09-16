@@ -18,6 +18,7 @@ print (iris.target.shape)
 X = iris.data
 y = iris.target
 
+#tuning parameter n_neighbor = 1
 knn = KNeighborsClassifier(n_neighbors=1)
 
 print (knn)
